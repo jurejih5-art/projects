@@ -8,20 +8,7 @@ document.querySelectorAll('nav ul li a').forEach(link => {
     });
 });
 
-// Mobile menu
-const menuBtn = document.getElementById("menu-btn");
-const navLinks = document.getElementById("nav-links");
-menuBtn.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
-});
 
-// Scroll animation for services
-const cards = document.querySelectorAll(".service-card");
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-    }
-  });
-}, { threshold: 0.2 });
+ // function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.style.display = menu.style.display === "block" ? "none" : "block";
